@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rveradev</title>
+
+    <!-- FAVICON -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!-- BOOTSTRAP -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    />
+
+    <!-- Íconos FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- MAP -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+  </head>
+  <body>
+    <!-- CONTENIDO -->
+    <div class="d-flex">
+      <!-- Sidebar -->
+      <sidebar class="sidebar border-end d-none d-lg-block">
+        <div class="sidebar-heading d-flex flex-column align-items-center mt-5">
+          <h1 class="name">Rafael Vera Pinto</h1>
+          <p class="title">Web developer</p>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="sidebar-content">
+          <!-- navbar -->
+          <nav class="navbar">
+            <div class="navbar-list">
+              <div class="navbar-item">
+                <div class="icon-box">
+                  <i class="fa-regular fa-user"></i>
+                </div>
+                <button class="navbar-link" data-nav-link>Sobre mi</button>
+              </div>
+              <div class="navbar-item">
+                <div class="icon-box">
+                  <i class="fa-solid fa-briefcase"></i>
+                </div>
+                <button class="navbar-link" data-nav-link>Experiencia</button>
+              </div>
+              <div class="navbar-item">
+                <div class="icon-box">
+                  <i class="fa-solid fa-code"></i>
+                </div>
+                <button class="navbar-link" data-nav-link>Portafolio</button>
+              </div>
+              <div class="navbar-item">
+                <div class="icon-box">
+                  <i class="fa-regular fa-address-book"></i>
+                </div>
+                <button class="navbar-link" data-nav-link>Contacto</button>
+              </div>
+            </div>
+          </nav>
+
+          <!-- Redes sociales -->
+          <div class="social-content">
+            <ul class="social-list">
+              <li class="social-item">
+                <a href="https://github.com/rveradev" class="social-link">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </li>
+              <li class="social-item">
+                <a
+                  href="https://www.linkedin.com/in/rafaelverapinto/"
+                  class="social-link"
+                >
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </sidebar>
+
+      <!-- Navbar mobile -->
+      <nav class="navbar fixed-bottom mobile-navbar d-lg-none">
+        <div class="container-fluid">
+          <div class="d-flex justify-content-center w-100">
+            <button class="navbar-link" data-nav-link>Sobre mi</button>
+            <button class="navbar-link" data-nav-link>Experiencia</button>
+            <button class="navbar-link" data-nav-link>Portafolio</button>
+            <button class="navbar-link" data-nav-link>Contacto</button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- MAIN -->
+      <main class="main-content">
+        <!-- Sobre mi -->
+        <article data-page="sobre mi">
+          <h1 class="article-title">Sobre mi</h1>
+          <section class="section-content">
+            <p>
+              Soy Rafael Vera, un analista programador y un apasionado del mundo
+              digital. Disfruto de dar forma a las ideas y convertirlas en
+              productos digitales funcionales y atractivos. Mi objetivo es
+              combinar mi experiencia en desarrollo web y análisis de datos para
+              crear soluciones innovadoras que impacten positivamente en la vida
+              de las personas.
+            </p>
+          </section>
+
+          <!-- Lo que hago -->
+          <section class="section-content">
+            <h3 class="section-title">Lo que hago</h3>
+
+            <ul class="service-list">
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <i class="fa-solid fa-laptop-code fa-3x"></i>
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Web Development</h4>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <i class="fa-solid fa-mobile fa-3x"></i>
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Mobile Apps</h4>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <i class="fa-solid fa-magnifying-glass-chart fa-3x"></i>
+                </div>
+
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Data Analyst</h4>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Habilidades -->
+          <section class="section-content">
+            <h3 class="section-title">Mis Habilidades</h3>
+            <p>
+              Durante mi trayectoria en el área de la informática, he
+              desarrollado una variedad de habilidades que me han permitido
+              crear aplicaciones cada vez más complejas y eficientes.
+            </p>
+
+            <div class="skill-list">
+              <div class="skill-item">
+                <i class="fab fa-lg fa-js"></i>
+                <p class="ms-3 mt-3">JavaScript</p>
+              </div>
+
+              <div class="skill-item">
+                <i class="fab fa-lg fa-python"></i>
+                <p class="ms-3 mt-3">Python</p>
+              </div>
+
+              <div class="skill-item">
+                <i class="fas fa-lg fa-file-excel"></i>
+                <p class="ms-3 mt-3">VBA</p>
+              </div>
+
+              <div class="skill-item">
+                <i class="fab fa-lg fa-java"></i>
+                <p class="ms-3 mt-3">Java</p>
+              </div>
+
+              <div class="skill-item">
+                <i class="fas fa-lg fa-database"></i>
+                <p class="ms-3 mt-3">MySQL</p>
+              </div>
+
+              <div class="skill-item">
+                <i class="fas fa-lg fa-database"></i>
+                <p class="ms-3 mt-3">PostgreSQL</p>
+              </div>
+
+              <div class="skill-item">
+                <i class="fas fa-lg fa-database"></i>
+                <p class="ms-3 mt-3">MongoDB</p>
+              </div>
+
+              <div class="skill-item">
+                <i class="fab fa-lg fa-html5"></i>
+                <p class="ms-3 mt-3">HTML</p>
+              </div>
+
+              <div class="skill-item">
+                <i class="fab fa-lg fa-css3-alt"></i>
+                <p class="ms-3 mt-3">CSS</p>
+              </div>
+
+              <div class="skill-item">
+                <i class="fab fa-lg fa-bootstrap"></i>
+                <p class="ms-3 mt-3">Bootstrap</p>
+              </div>
+
+              <div class="skill-item">
+                <i class="fab fa-lg fa-node"></i>
+                <p class="ms-3 mt-3">Node.js</p>
+              </div>
+
+              <div class="skill-item">
+                <i class="fab fa-lg fa-react"></i>
+                <p class="ms-3 mt-3">React</p>
+              </div>
+
+              <div class="skill-item">
+                <i class="fa-brands fa-android"></i>
+                <p class="ms-3 mt-3">Android Studio</p>
+              </div>
+
+              <div class="skill-item">
+                <i class="fab fa-lg fa-git"></i>
+                <p class="ms-3 mt-3">Git</p>
+              </div>
+
+              <div class="skill-item">
+                <i class="fas fa-lg fa-file"></i>
+                <p class="ms-3 mt-3">Power BI</p>
+              </div>
+
+              <div class="skill-item">
+                <i class="fab fa-lg fa-aws"></i>
+                <p class="ms-3 mt-3">AWS</p>
+              </div>
+
+              <div class="skill-item">
+                <i class="fab fa-lg fa-jira"></i>
+                <p class="ms-3 mt-3">Jira</p>
+              </div>
+
+              <div class="skill-item">
+                <i class="fab fa-lg fa-confluence"></i>
+                <p class="ms-3 mt-3">Confluence</p>
+              </div>
+            </div>
+          </section>
+        </article>
+
+        <!-- Experiencia -->
+        <article data-page="experiencia">
+          <h1 class="article-title">Experiencia</h1>
+
+          <!-- Timeline experiencia laboral -->
+          <section class="section-content">
+            <h3 class="timeline-title section-title">Experiencia Laboral</h3>
+            <div class="timeline">
+              <ul>
+                <li class="timeline-event">
+                  <label class="timeline-event-icon"></label>
+                  <div class="timeline-event-content">
+                    <p class="timeline-event-thumbnail">
+                      Data & Analytics Trainee
+                    </p>
+                    <h3>ARKHO</h3>
+                    <ul class="task-list">
+                      <li>
+                        Creación de reportes interactivos y dinámicos utilizando
+                        Power BI
+                      </li>
+                      <li>
+                        Implementación de automatizaciones y desarrollo de
+                        scripts en Python para optimizar procesos de análisis de
+                        datos
+                      </li>
+                      <li>
+                        Documentación de scripts desarrollados en Python y para
+                        los informes creados en Power BI.
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="timeline-event">
+                  <label class="timeline-event-icon"></label>
+                  <div class="timeline-event-content">
+                    <p class="timeline-event-thumbnail">Analista Programador</p>
+                    <h3>CORFO</h3>
+                    <ul class="task-list">
+                      <li>
+                        Apoyo en la automatización de procesos mediante el uso
+                        de tecnologías de la información.
+                      </li>
+                      <li>Gestión y diseño de base de datos relacional.</li>
+                      <li>
+                        Desarrollo en VB para el diseño de aplicaciones a la
+                        medida según las necesidades de la gerencia.
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Timeline formacion -->
+          <section class="section-content">
+            <h3 class="timeline-title section-title">Formacion Academica</h3>
+            <div class="timeline">
+              <ul>
+                <li class="timeline-event">
+                  <label class="timeline-event-icon"></label>
+                  <div class="timeline-event-content">
+                    <p class="timeline-event-thumbnail">Analista Programador</p>
+                    <h3>Instituto Profesional INACAP</h3>
+                    <h4>2017 - 2021</h4>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Timeline formacion complementaria -->
+          <section class="section-content">
+            <h3 class="timeline-title section-title">
+              Formacion complementaria
+            </h3>
+            <div class="timeline">
+              <ul>
+                <li class="timeline-event">
+                  <label class="timeline-event-icon"></label>
+                  <div class="timeline-event-content">
+                    <p class="timeline-event-thumbnail">
+                      Desarrollo de Aplicaciones Moviles Android Trainee
+                    </p>
+                    <h3>Universidad Andrés Bello</h3>
+                    <h4>2025</h4>
+                    <div class="course-content">
+                      <span class="badge"></span>
+                      <span class="badge"></span>
+                      <span class="badge"></span>
+                      <span class="badge"></span>
+                      <span class="badge"></span>
+                      <span class="badge"></span>
+                      <span class="badge"></span>
+                      <span class="badge"></span>
+                    </div>
+                  </div>
+                </li>
+                <li class="timeline-event">
+                  <label class="timeline-event-icon"></label>
+                  <div class="timeline-event-content">
+                    <p class="timeline-event-thumbnail">
+                      Desarrollo de Aplicaciones Full Stack JavaScript Trainee
+                    </p>
+                    <h3>Edutecno (SENCE)</h3>
+                    <h4>2023 - 2024</h4>
+                    <div class="course-content">
+                      <span class="badge">Node</span>
+                      <span class="badge">PostgreSQL</span>
+                      <span class="badge">JavaScript</span>
+                      <span class="badge">HTML5</span>
+                      <span class="badge">CSS</span>
+                      <span class="badge">Bootstrap</span>
+                      <span class="badge">JQuery</span>
+                      <span class="badge">GIT</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="timeline-event">
+                  <label class="timeline-event-icon"></label>
+                  <div class="timeline-event-content">
+                    <p class="timeline-event-thumbnail">
+                      AWS: Foundational Level
+                    </p>
+                    <h3>ARKHO</h3>
+                    <h4>2023</h4>
+                    <div class="course-content">
+                      <span class="badge">Fundamentos AWS</span>
+                      <span class="badge">Seguridad</span>
+                      <span class="badge">Arquitectura</span>
+                      <span class="badge">Optimización de recursos</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="timeline-event">
+                  <label class="timeline-event-icon"></label>
+                  <div class="timeline-event-content">
+                    <p class="timeline-event-thumbnail">AWS re/Start</p>
+                    <h3>CodingDojo</h3>
+                    <h4>2022 - 2023</h4>
+                    <div class="course-content">
+                      <span class="badge">Fundamentos IT</span>
+                      <span class="badge">AWS</span>
+                      <span class="badge">Networking</span>
+                      <span class="badge">Seguridad</span>
+                      <span class="badge">Linux</span>
+                      <span class="badge">Database</span>
+                      <span class="badge">Python</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="timeline-event">
+                  <label class="timeline-event-icon"></label>
+                  <div class="timeline-event-content">
+                    <p class="timeline-event-thumbnail">Tu Futuro</p>
+                    <h3>Fundación Forge</h3>
+                    <h4>2022 - 2023</h4>
+                    <div class="course-content">
+                      <span class="badge">Competencias laborales</span>
+                      <span class="badge">Soft Skills</span>
+                    </div>
+                  </div>
+                </li>
+                <li class="timeline-event">
+                  <label class="timeline-event-icon"></label>
+                  <div class="timeline-event-content">
+                    <p class="timeline-event-thumbnail">
+                      Gestión de Proyectos con Metodologías Ágiles
+                    </p>
+                    <h3>SENCE</h3>
+                    <div class="course-content">
+                      <span class="badge">Fundamentos</span>
+                      <span class="badge">Roles</span>
+                      <span class="badge">Planificación</span>
+                      <span class="badge">Ciclos de desarrollo</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </article>
+
+        <!-- Portafolio -->
+        <article data-page="portafolio">
+          <h1 class="article-title">Portafolio</h1>
+
+          <section class="portfolio-section">
+            <div class="filter-list">
+              <button class="filter-btn" data-filter="all">Todo</button>
+              <button class="filter-btn" data-filter="web">
+                Desarrollo Web
+              </button>
+              <button class="filter-btn" data-filter="mobile">
+                Aplicaciones Moviles
+              </button>
+              <button class="filter-btn" data-filter="others">Otros</button>
+            </div>
+
+            <!-- proyectos -->
+            <div class="project-list">
+              <div class="project-item" data-category="web">
+                <a href="https://github.com/rveradev/clinicVet">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <img src="" />
+                    <p class="img-text">
+                      API REST que gestiona información de una clínica
+                      veterinaria, permite realizar operaciones CRUD sobre las
+                      entidades Dueño y Mascota.
+                    </p>
+                  </figure>
+                  <h4 class="project-title">clinicVet</h4>
+                  <p class="project-category">Web development</p>
+                </a>
+              </div>
+
+              <div class="project-item" data-category="others">
+                <a href="https://github.com/rveradev/github-user-activity-cli">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <img src="" />
+                    <p class="img-text">
+                      Un programa de consola que realiza solicitudes a la API de
+                      GitHub para obtener y mostrar la actividad reciente de un
+                      usuario.
+                    </p>
+                  </figure>
+                  <h4 class="project-title">GitHub User Activity</h4>
+                  <p class="project-category">Otros</p>
+                </a>
+              </div>
+
+              <div class="project-item" data-category="others">
+                <a href="#">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <img src="" />
+                    <p class="img-text">
+                      Aplicación de consola para gestionar tareas usando Python
+                    </p>
+                  </figure>
+                  <h4 class="project-title">Task Tracker CLI</h4>
+                  <p class="project-category">Otros</p>
+                </a>
+              </div>
+
+              <div class="project-item" data-category="web">
+                <a href="https://github.com/rveradev/p1_presupuesto">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <img src="" />
+                    <p class="img-text">
+                      Una aplicación web sencilla que permite a los usuarios
+                      gestionar su presupuesto de manera eficiente
+                    </p>
+                  </figure>
+                  <h4 class="project-title">Presupuesto</h4>
+                  <p class="project-category">Web development</p>
+                </a>
+              </div>
+
+              <div class="project-item" data-category="web">
+                <a href="https://github.com/rveradev/p2_api_digimon">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <img src="" />
+                    <p class="img-text">
+                      Aplicación frontend que consume una API pública de Digimon
+                      para mostrar detalles de los personajes.
+                    </p>
+                  </figure>
+                  <h4 class="project-title">API Digimon</h4>
+                  <p class="project-category">Web development</p>
+                </a>
+              </div>
+
+              <div class="project-item" data-category="web">
+                <a href="https://github.com/rveradev/p3_bootcampApp">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <img src="" />
+                    <p class="img-text">
+                      Aplicación web creada para gestionar el inicio de sesión
+                      de usuarios en un entorno de aprendizaje tipo bootcamp
+                    </p>
+                  </figure>
+                  <h4 class="project-title">Bootcamp App</h4>
+                  <p class="project-category">Web development</p>
+                </a>
+              </div>
+            </div>
+          </section>
+        </article>
+
+        <!-- Contacto -->
+        <article data-page="contacto">
+          <h1 class="article-title">Contacto</h1>
+
+          <!-- informacion -->
+          <section class="section-content">
+            <h3 class="section-title">Contáctame</h3>
+            <div class="contacto-text">
+              <p>
+                Si tienes alguna pregunta, proyecto o simplemente deseas
+                saludar, no dudes en ponerte en contacto conmigo. Estoy
+                disponible para colaborar en proyectos.
+              </p>
+            </div>
+
+            <div class="contacto-link">
+              <p>Puedes comunicarte conmigo a través de:</p>
+              <ul class="contacto-list">
+                <li class="contacto-item">
+                  <a href="mailto:rafael.verapinto@gmail.com">
+                    <div class="icon-box">
+                      <i class="fa-regular fa-envelope"></i>
+                    </div>
+                    rafael.verapinto@gmail.com
+                  </a>
+                </li>
+                <li class="contacto-item">
+                  <a href="https://www.linkedin.com/in/rafaelverapinto/">
+                    <div class="icon-box">
+                      <i class="fa-brands fa-linkedin"></i>
+                    </div>
+                    /rafaelverapinto
+                  </a>
+                </li>
+                <li class="contacto-item">
+                  <a href="https://github.com/rveradev">
+                    <div class="icon-box">
+                      <i class="fa-brands fa-github"></i>
+                    </div>
+                    /rveradev
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- mapa -->
+          <section class="map-section">
+            <div id="map"></div>
+            <div class="map-info">
+              <i class="fas fa-location-dot fa-2x"></i>
+              <h3>Melipilla, Chile</h3>
+            </div>
+          </section>
+        </article>
+      </main>
+    </div>
+    <!-- FIN CONTENIDO -->
+
+    <!-- CUSTOM JS -->
+    <script src="assets/js/script.js"></script>
+
+    <!-- BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- MAP -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+  </body>
+</html>
